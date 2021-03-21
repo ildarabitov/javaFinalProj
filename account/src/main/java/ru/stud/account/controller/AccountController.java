@@ -17,7 +17,7 @@ public class AccountController {
     private AccountServiceImpl accountService;
 
     @PostMapping("/{id}")
-    public Account saveAccount(@PathVariable("id") Long clientNumber) {
+    public Account saveAccount(@PathVariable("id") String clientNumber) {
         log.info("Inside saveAccount method of AccountController arg = " + clientNumber);
         return accountService.saveAccount(clientNumber);
     }

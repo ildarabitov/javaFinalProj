@@ -8,4 +8,5 @@ import ru.stud.account.entity.Account;
 public interface AccountRepository extends JpaRepository<Account,Long> {
      Account findByAccountId(Long accountId);
      Account findByCardIdentifier(String cardIdentifier);
+     Account findByClientNumber(String cardIdentifier);
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.stud.minibankgateway.VO.util.OperationType;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

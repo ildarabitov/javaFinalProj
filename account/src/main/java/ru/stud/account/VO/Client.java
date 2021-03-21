@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,5 +16,6 @@ public class Client {
     private String firstName;
     private String middleNAme;
     private String lastName;
-    private Long clientNumber;
+    private String clientNumber;
+    private LocalDate birthDate;
 }

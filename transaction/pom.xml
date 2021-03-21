@@ -14,10 +14,14 @@
     <name>transaction</name>
     <description>Demo project for Spring Boot</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <testcontainers.version>1.15.2</testcontainers.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -79,6 +83,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>transaction</finalName>
     </build>
 
 </project>

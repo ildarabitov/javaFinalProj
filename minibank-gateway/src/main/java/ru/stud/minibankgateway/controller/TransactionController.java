@@ -10,6 +10,7 @@ import ru.stud.minibankgateway.VO.dto.TransactionDTO;
 import ru.stud.minibankgateway.VO.resp.ChangeOverBalance;
 import ru.stud.minibankgateway.adapter.TransactionAdapter;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RestController
@@ -25,7 +26,7 @@ public class TransactionController {
                     " if the payment is PAY, if you want to top up the balance then BALANCE_REFILL," +
                     " the same amount to be debited or replenished",
             response = ChangeOverBalance.class)
-    public ChangeOverBalance сhangeOverBalance(@RequestBody TransactionDTO transactionDTO) {
+    public ChangeOverBalance сhangeOverBalance(@Valid @RequestBody TransactionDTO transactionDTO) {
         log.info("Inside createClient method of ClientController and arg = " + transactionDTO);
         Transaction transaction=new Transaction(transactionDTO.getCardIdentifier(),transactionDTO.getBalance(),
                 transactionDTO.getOperationType(), UUID.randomUUID().toString().replaceAll("-", "").substring(1,30));

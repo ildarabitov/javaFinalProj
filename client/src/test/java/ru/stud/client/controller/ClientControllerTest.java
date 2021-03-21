@@ -19,12 +19,12 @@ class ClientControllerTest {
     @Test
     void saveClient() {
         Client client=new Client();
-        client.setClientNumber( 791765610L);
+        client.setClientNumber( "791765610");
         client.setFirstName("Anton");
         client.setLastName("Antonov");
         client.setMiddleNAme("Antonovich");
         repository.save(client);
-        Client client1=repository.findByClientNumber(791765610L);
+        Client client1=repository.findByClientNumber("791765610");
         assertTrue(client1!=null);
         assertEquals(client1.getFirstName(),client.getFirstName());
         assertEquals(client1.getLastName(),client.getLastName());

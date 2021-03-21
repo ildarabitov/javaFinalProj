@@ -16,7 +16,7 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long accountId;
-    private Long clientNumber;
+    private String clientNumber;
     private String firstName;
     private String lastName;
     private String middleName;

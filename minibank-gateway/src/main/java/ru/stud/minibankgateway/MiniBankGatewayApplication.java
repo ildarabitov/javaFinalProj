@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 @SpringBootApplication
 
 public class MiniBankGatewayApplication {
@@ -13,5 +16,5 @@ public class MiniBankGatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MiniBankGatewayApplication.class, args);
 	}
-
+//
 }
